@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/bootstrap.css' %}">
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %} </title>
+  </head>
+  <body>
+    <div class="nav navbar navbar-fixed-top navbar-color" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+        <h2 class="heading_style"><a href="{% url 'polls:index'%}"><strong> MY POLL APP </strong></a></h2> 
+      </div>
+     </div>
+    </div>
+    <div class = "container page-content">
+    {% block body %}{% endblock %}
+    </div>
+  </body>
+</html>

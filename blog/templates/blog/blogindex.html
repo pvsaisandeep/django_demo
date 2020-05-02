@@ -1,0 +1,10 @@
+{% extends "blog/base.html" %}
+{% block title %}
+	"Blog Index"
+{% endblock %}
+{% block body %}
+	{% for post in blogposts %}
+		<div class="container question_style">
+		<p>"The post is : {{post.title}}"</p></div>
+	{% endfor %}
+{% endblock %}
